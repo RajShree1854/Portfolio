@@ -1,0 +1,38 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Font family definitions */
+:root {
+  --font-display: 'Bricolage Grotesque', 'Space Grotesk', 'Syne', 'Bebas Neue', sans-serif;
+  --font-mono: 'DM Mono', 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+/* Custom scrollbar styles */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scroll with reduced motion support */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom cursor — hide native cursor only where inverting circle activates */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+
+  /* Restore pointer on interactive elements */
+  a, button, [role="button"] {
+    cursor: pointer !important;
+  }
+}
