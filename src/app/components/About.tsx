@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import profileImg from "../../profile.jpeg";
 
 export function About() {
   return (
@@ -29,7 +30,7 @@ export function About() {
               }}
             >
               <img
-                src="/src/profile.jpeg"
+                src={profileImg}
                 alt="Rajshree"
                 className="w-full h-auto object-cover"
               />
