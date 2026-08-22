@@ -33,68 +33,29 @@ export function Hero() {
         }
         
         .tag-chip {
-          position: absolute;
           transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
           white-space: nowrap;
         }
         
-        /* Default spread positions */
-        .tag-chip:nth-child(1) {
-          top: 8%;
-          left: 55%;
-          transform: translate(-50%, 0);
-        }
-        
-        .tag-chip:nth-child(2) {
-          top: 25%;
-          left: 10%;
-          transform: translate(-50%, 0);
-        }
-        
-        .tag-chip:nth-child(3) {
-          top: 45%;
-          left: 60%;
-          transform: translate(-50%, 0);
-        }
-        
-        .tag-chip:nth-child(4) {
-          top: 65%;
-          left: 15%;
-          transform: translate(-50%, 0);
-        }
-        
-        .tag-chip:nth-child(5) {
-          top: 80%;
-          left: 50%;
-          transform: translate(-50%, 0);
-        }
-        
-        /* Hover state - stack vertically like a tower */
-        .tag-chip-container:hover .tag-chip {
-          left: 50% !important;
-          transform: translate(-50%, 0);
-          width: 140px;
-          text-align: center;
-        }
-        
-        .tag-chip-container:hover .tag-chip:nth-child(1) {
-          top: calc(50% - 80px) !important;
-        }
-        
-        .tag-chip-container:hover .tag-chip:nth-child(2) {
-          top: calc(50% - 40px) !important;
-        }
-        
-        .tag-chip-container:hover .tag-chip:nth-child(3) {
-          top: calc(50%) !important;
-        }
-        
-        .tag-chip-container:hover .tag-chip:nth-child(4) {
-          top: calc(50% + 40px) !important;
-        }
-        
-        .tag-chip-container:hover .tag-chip:nth-child(5) {
-          top: calc(50% + 80px) !important;
+        @media (min-width: 1024px) {
+          .tag-chip {
+            top: var(--d-top);
+            left: var(--d-left);
+            transform: translate(-50%, 0);
+          }
+          
+          .tag-chip-container:hover .tag-chip {
+            left: 50% !important;
+            transform: translate(-50%, 0);
+            width: 140px;
+            text-align: center;
+          }
+          
+          .tag-chip-container:hover .tag-chip:nth-child(1) { top: calc(50% - 80px) !important; }
+          .tag-chip-container:hover .tag-chip:nth-child(2) { top: calc(50% - 40px) !important; }
+          .tag-chip-container:hover .tag-chip:nth-child(3) { top: calc(50%) !important; }
+          .tag-chip-container:hover .tag-chip:nth-child(4) { top: calc(50% + 40px) !important; }
+          .tag-chip-container:hover .tag-chip:nth-child(5) { top: calc(50% + 80px) !important; }
         }
       `}</style>
 
@@ -213,7 +174,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="tag-chip-container relative h-[400px] lg:h-[500px]">
+            <div className="tag-chip-container flex flex-wrap justify-center gap-3 lg:block lg:relative h-auto lg:h-[500px] mt-8 lg:mt-0">
               {[
                 { text: "#FullStack", top: "8%", left: "55%", delay: 0 },
                 { text: "#GenAI", top: "25%", left: "10%", delay: 0.15 },
@@ -223,12 +184,12 @@ export function Hero() {
               ].map((tag, index) => (
                 <motion.div
                   key={index}
-                  className="tag-chip absolute bg-[#F5F0E8] border-[2px] border-[#1A1A1A] px-4 py-2"
+                  className="tag-chip relative lg:absolute bg-[#F5F0E8] border-[2px] border-[#1A1A1A] px-4 py-2"
                   style={{
                     boxShadow: "3px 3px 0px #1A1A1A",
-                    top: tag.top,
-                    left: tag.left,
-                  }}
+                    "--d-top": tag.top,
+                    "--d-left": tag.left,
+                  } as React.CSSProperties}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{
                     opacity: 1,
