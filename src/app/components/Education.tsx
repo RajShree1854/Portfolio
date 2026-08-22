@@ -71,6 +71,10 @@ export function Education() {
                     <span className="text-[#00B4D8] font-black">·</span>
                     <span>Adobe Hackathon — Cleared 3 competitive rounds.</span>
                   </li>
+                  <li className="flex gap-2">
+                    <span className="text-[#00B4D8] font-black">·</span>
+                    <span>Open Source — Shipped projects earning 130+ GitHub stars from the community.</span>
+                  </li>
                 </ul>
               </div>
             </div>

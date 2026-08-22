@@ -74,6 +74,7 @@ export function About() {
           >
             {[
               { text: "⚔️ Expert @ Codeforces | Knight @ LeetCode | 4★ CodeChef", rotate: -2 },
+              { text: "🌟 Open Source Contributor", rotate: 1.5 },
               { text: "🛠 Ships side projects for fun", rotate: 1 },
               { text: "🤝 Open to GenAI + agentic AI collabs", rotate: -1.5 },
             ].map((chip, index) => (
