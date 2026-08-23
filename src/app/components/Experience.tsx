@@ -57,6 +57,18 @@ export function Experience() {
                 <ul style={{ fontFamily: 'var(--font-display)' }} className="space-y-3 text-base sm:text-lg">
                   <li className="flex gap-3">
                     <span className="text-[#00B4D8] font-black">·</span>
+                    <span>Orchestrated HookForge, a high-performance FastAPI and Redis webhook relay featuring asynchronous dispatch and exponential backoff, reducing event delivery failures by 99% and improving background job throughput by 85%.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#00B4D8] font-black">·</span>
+                    <span>Built LLMCache, a semantic caching layer for LLMs utilizing FAISS vector similarity search, cutting external API costs by 60% and decreasing average prompt response latency by 80%.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#00B4D8] font-black">·</span>
+                    <span>Engineered PdfCraft, an automated Python microservice that asynchronously generates batch PDF invoices from JSON payloads, decoupling heavy processing and reducing Next.js main API response times by 70%.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#00B4D8] font-black">·</span>
                     <span>Developed ImgNest, a full-stack Next.js 14 image-hosting SaaS platform with CDN delivery, rate limiting, and a secure admin dashboard, cutting average upload latency by 50% and increasing platform reliability by 40%.</span>
                   </li>
                   <li className="flex gap-3">

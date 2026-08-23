@@ -72,6 +72,54 @@ const bentoProjects: (Project & { colSpan: number; rowSpan: number; isLarge?: bo
     },
   },
   {
+    title: "HookForge — Reliable Webhook Event Dispatcher",
+    tags: ["FastAPI", "Redis", "RQ", "Python", "Docker"],
+    description:
+      "A high-performance webhook relay and management system. Handles payload serialization, asynchronous event dispatching via Redis queues, and exponential backoff retries for failed deliveries.",
+    url: "https://github.com/RajShree1854/HookForge",
+    impact: "↗ Robust retry logic · Redis queue · Scalable workers",
+    colSpan: 2,
+    rowSpan: 1,
+    problemSolution: {
+      problem:
+        "Integrating webhooks into distributed systems often leads to dropped events during network outages or target service downtime, requiring complex custom retry logic.",
+      solution:
+        "Engineered a dedicated FastAPI microservice that queues incoming payloads into Redis. Background workers consume jobs, execute deliveries, and automatically apply exponential backoff on failures.",
+    },
+  },
+  {
+    title: "LLMCache — Semantic Caching for Large Language Models",
+    tags: ["Python", "SQLite", "FAISS", "Vector DB", "Embeddings"],
+    description:
+      "A semantic caching layer for LLMs that intercepts identical or semantically similar queries. Uses embeddings and vector similarity search (FAISS) to return cached responses instantly.",
+    url: "https://github.com/RajShree1854/LLMCache",
+    impact: "↗ FAISS vector search · Drastic latency reduction · API cost savings",
+    colSpan: 2,
+    rowSpan: 1,
+    problemSolution: {
+      problem:
+        "LLM API calls are expensive and slow. Sending the same or similar prompts repeatedly wastes time and money without adding value.",
+      solution:
+        "Implemented a semantic cache that hashes user prompts into vector embeddings. Future queries are checked against a FAISS index; highly similar prompts instantly return the cached response, bypassing the LLM entirely.",
+    },
+  },
+  {
+    title: "PdfCraft — Automated PDF Reporting Microservice",
+    tags: ["Python", "Microservices", "Next.js", "PDF Generation"],
+    description:
+      "An automated Python microservice that asynchronously generates batch PDF invoices and financial reports from raw JSON payloads, offloading heavy processing from the main web application.",
+    url: "https://github.com/RajShree1854/PdfCraft",
+    impact: "↗ Async generation · Prevents timeouts · −70% response times",
+    colSpan: 2,
+    rowSpan: 1,
+    problemSolution: {
+      problem:
+        "Generating batch PDFs directly on the main Next.js API thread blocks the event loop, causing server timeouts and severely degrading latency.",
+      solution:
+        "Decoupled heavy file generation into a dedicated Python microservice to asynchronously process JSON payloads. Prevented timeouts and reduced main application response times by 70%.",
+    },
+  },
+  {
     title: "Shortener API — Stateless Cryptographic Redirect",
     tags: ["Next.js", "AES-256-CBC", "Google reCAPTCHA", "Node.js Crypto"],
     description:
