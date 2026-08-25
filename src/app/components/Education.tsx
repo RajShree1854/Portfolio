@@ -73,7 +73,7 @@ export function Education() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-[#00B4D8] font-black">·</span>
-                    <span>Open Source — Shipped projects earning 130+ GitHub stars from the community.</span>
+                    <span>Open Source — Shipped projects earning 180+ GitHub stars from the community.</span>
                   </li>
                 </ul>
               </div>
