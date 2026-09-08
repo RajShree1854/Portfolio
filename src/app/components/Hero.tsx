@@ -148,7 +148,7 @@ export function Hero() {
               </motion.button>
 
               <motion.a
-                href="https://drive.google.com/file/d/1e6UgPuYBam2uVoE1u3oVnAMPYnsALL4D"
+                href="https://drive.google.com/file/d/1zLiGZNg6Xvn7jhaJ-i2HS5YxIKDbkTLv"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
