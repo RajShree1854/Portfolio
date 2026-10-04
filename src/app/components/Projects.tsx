@@ -13,7 +13,7 @@ interface Project {
 
 /* ─── Data ───────────────────────────────────────────────── */
 const featured: Project = {
-  title: "PR-Agent — AI-Powered Code Review Automation",
+  title: "PR-Agent — Automated Code Review Engine",
   tags: ["Python", "LiteLLM", "FastAPI", "Jinja2", "GitHub API", "Docker"],
   description:
     "A fully modified AI code review agent that automates pull request reviews, generates descriptions, and posts inline suggestions directly on code. Parses git patches, compresses diffs with a token-aware algorithm to fit LLM context windows, and queries LLMs via LiteLLM to post structured feedback across GitHub.",
@@ -23,7 +23,7 @@ const featured: Project = {
 
 const bentoProjects: (Project & { colSpan: number; rowSpan: number; isLarge?: boolean; problemSolution?: { problem: string; solution: string } })[] = [
   {
-    title: "Fraud Detection — Real-Time Streaming Pipeline",
+    title: "FinSentine — Real-Time Transaction Intelligence",
     tags: ["Apache Kafka", "Apache Flink", "PostgreSQL", "Streamlit", "Docker"],
     description:
       "A distributed real-time fraud detection pipeline. Kafka ingests high-volume transaction streams from multiple banks, Flink SQL runs tumbling-window aggregations to catch suspicious patterns, PostgreSQL archives all data, and Streamlit surfaces live alerts.",
@@ -40,7 +40,7 @@ const bentoProjects: (Project & { colSpan: number; rowSpan: number; isLarge?: bo
     },
   },
   {
-    title: "Stream — Fullstack Movie Streaming Platform",
+    title: "Vexor — Content Delivery Platform",
     tags: ["FastAPI", "Pyrogram", "React", "Firebase", "MongoDB", "asyncio"],
     description:
       "A full-stack Netflix-style streaming platform that uses Telegram as a free decentralized CDN. FastAPI translates HTTP Range requests into MTProto chunk fetches, with in-memory multi-client load balancing to bypass Telegram rate limits.",
@@ -120,7 +120,7 @@ const bentoProjects: (Project & { colSpan: number; rowSpan: number; isLarge?: bo
     },
   },
   {
-    title: "Shortener API — Stateless Cryptographic Redirect",
+    title: "Routiq — Stateless Cryptographic Redirect",
     tags: ["Next.js", "AES-256-CBC", "Google reCAPTCHA", "Node.js Crypto"],
     description:
       "A stateless URL redirect service that packs the destination directly into the token via AES-256 encryption — zero database lookups. reCAPTCHA v2 gates every redirect to block bots. −90% unauthorized access, −95% bot-generated links.",
@@ -152,7 +152,7 @@ const bentoProjects: (Project & { colSpan: number; rowSpan: number; isLarge?: bo
     },
   },
   {
-    title: "Smart Financial Portfolio — AI Optimizer",
+    title: "Smart Financial Portfolio — AI Portfolio Optimizer",
     tags: ["Next.js 14", "TensorFlow.js", "Simulated Annealing", "Recharts"],
     description:
       "AI-powered portfolio optimizer in TypeScript. Fetches live OHLCV data, engineers RSI/MACD features, trains a TF.js CNN on the fly, then runs Simulated Annealing over thousands of iterations to find the maximum Sharpe Ratio allocation.",
